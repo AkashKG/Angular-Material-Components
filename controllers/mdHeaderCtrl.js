@@ -27,7 +27,7 @@ angular.module('mdHeaderCtrl',[])
                 $scope.performIconAction=function(actionId){
                     var id = $scope.headerIcons.actions[actionId].id;
                     var content = "This is " + id + " Dialog";
-                    dialogFactory.alert(id, content);
+                    dialogFactory.alert("Alert", content);
                 };
 	});
 

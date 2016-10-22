@@ -1,7 +1,11 @@
 angular.module('mdHeaderDirective',[])
 	.directive('mdHeader', function(){
-		return{
-			controller:'mdHeaderController',
-			templateUrl:'templates/sample.html'
-		};
+            return{
+                restrict:'E',
+                scope:{
+                    info:'=info',
+                    headerIcons:'=headerIcons'
+                },
+                templateUrl:'templates/sample.html'
+            };
 	});

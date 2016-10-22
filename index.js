@@ -8,7 +8,7 @@ angular.module('myApp',['ngMaterial', 'ngRoute', 'ngMessages', 'ngAria', 'ngAnim
                 .title(title)
                 .content(content)
                 .ariaLabel('Alert')
-                .ok('Ok')
+                .ok('Okay')
             );
         }
      };
