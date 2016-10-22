@@ -10,7 +10,12 @@
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 	<div ng-cloak ng-controller="mdHeaderController">
-		<md-header info="info" header-icons="headerIcons"></md-header>
+            <md-header header="'MS Dhoni '" sub-header="'The Untold Story'" avatar="'book'">
+                <md-header-action icon-color="'primary'" icon-id="'edit'" ></md-header-action>
+                <md-header-action icon-color="'default'" icon-id="'book'" ></md-header-action>
+                <md-header-action icon-color="'default'" icon-id="'more_vert'" ></md-header-action>
+            </md-header>
+            
 	</div>
 	<script src="bower_components/angular/angular.min.js"></script>
   	<script src="bower_components/angular-route/angular-route.min.js"></script>

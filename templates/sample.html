@@ -2,18 +2,19 @@
     <md-card-content layout="row" layout-align="start center">
         <md-card-header>
             <md-card-avatar>
-                <md-icon>{{headerIcons.avatar}}</md-icon>
+                <md-icon>{{avatar}}</md-icon>
             </md-card-avatar>
             <md-card-header-text>
-                <span class="md-title">{{info.header}}</span>
-                <span class="md-caption">{{info.subHeader}}</span>
+                <span class="md-title">{{header}}</span>
+                <span class="md-caption">{{subHeader}}</span>
             </md-card-header-text>
         </md-card-header>
         <div flex=""></div>
         <md-card-icon-actions layout-align="end center">
-            <md-button  aria-label="add" ng-repeat="action in headerIcons.actions" class="md-icon-button md-{{action.color}}" ng-click="performIconAction($index)">
-                <md-icon>{{action.id}}</md-icon>
+            <md-button  aria-label="add" ng-repeat="icon in icons" class="md-icon-button md-{{icon.iconColor}}">
+                <md-icon>{{icon.iconId}}</md-icon>
             </md-button>
         </md-card-icon-actions>
     </md-card-content>
+    <div  ng-transclude></div>
 </md-card>
