@@ -13,6 +13,7 @@ I started this on 21st of October, 2016. Whenever I'll get an Idea to form a reu
 * Header Info
 	* Header
 	* Subheader
+* Actions
 
 #####Code Wiki
 In any of your controller you will have to provide the following information.
