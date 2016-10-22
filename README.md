@@ -7,7 +7,7 @@ There are many directives available out there such as material tables, which sav
 ####Status
 I started this on 21st of October, 2016. Whenever I'll get an Idea to form a reusable compenent I'll make it.
 
-##Current availability
+###Current availability
 
 ![Header](https://s17.postimg.org/cfulldnxr/image.jpg)
 
@@ -49,3 +49,22 @@ Parameters | Help
 `icon-id` | same as `avatar`
 `icon-color` | angular material `warn` `primary` etc...
 
+####Using it through bower |  _warning not to use now_
+
+`
+bower install mdComponents
+`
+* In the `index.html` add these scripts:
+
+```
+ <script src="bower_components/Header/directives/mdHeaderDirective.js"></script>
+ 
+ <script src="bower_components/Header/editableControllers/mdHACtrl.js"></script>
+```
+
+* Dependency injection
+
+```
+angular.module('yourApp',['ngMaterial','mdHeaderDirective','mdHeaderActionCtrl']);
+
+```
