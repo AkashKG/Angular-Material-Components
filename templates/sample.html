@@ -4,14 +4,14 @@
             <md-card-avatar>
                 <md-icon>{{headerIcons.avatar}}</md-icon>
             </md-card-avatar>
-            <md-header-text>
+            <md-card-header-text>
                 <span class="md-title">{{info.header}}</span>
-                <span class="md-subhead">{{info.subHeader}}</span>
-            </md-header-text>
+                <span class="md-caption">{{info.subHeader}}</span>
+            </md-card-header-text>
         </md-card-header>
         <div flex=""></div>
         <md-card-icon-actions layout-align="end center">
-            <md-button  aria-label="add" ng-repeat="action in headerIcons.actions" class="md-icon-button md-{{action.color}}">
+            <md-button  aria-label="add" ng-repeat="action in headerIcons.actions" class="md-icon-button md-{{action.color}}" ng-click="performIconAction($index)">
                 <md-icon>{{action.id}}</md-icon>
             </md-button>
         </md-card-icon-actions>
