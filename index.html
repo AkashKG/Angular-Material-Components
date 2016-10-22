@@ -11,9 +11,9 @@
 	</head>
 	<div ng-cloak ng-controller="mdHeaderController">
             <md-header header="'MS Dhoni '" sub-header="'The Untold Story'" avatar="'book'">
-                <md-header-action icon-color="'primary'" icon-id="'edit'" ></md-header-action>
+                <md-header-action icon-color="'primary'" icon-id="'edit'" ng-click="alert()"></md-header-action>
                 <md-header-action icon-color="'default'" icon-id="'book'" ></md-header-action>
-                <md-header-action icon-color="'default'" icon-id="'more_vert'" ></md-header-action>
+                <md-header-action icon-color="'default'" icon-id="'more_vert'"></md-header-action>
             </md-header>
             
 	</div>
@@ -26,4 +26,5 @@
 	<script src="index.js"></script>
 	<script src="directives/mdHeaderDirective.js"></script>
         <script src="controllers/mdHeaderCtrl.js"></script>
+        <script src="editableControllers/mdHACtrl.js"></script>
 </html>

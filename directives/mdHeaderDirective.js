@@ -1,5 +1,5 @@
 angular.module('mdHeaderDirective',[])
-	.directive('mdHeader', function(){
+	.directive('mdHeader', function(dialogFactory){
             return{
                 restrict:'E',
                 scope:{
@@ -7,13 +7,7 @@ angular.module('mdHeaderDirective',[])
                     subHeader:"=subHeader",
                     avatar:'=avatar',
                 },
-                controller: ['$scope', function mdHACtrl($scope) {
-                        $scope.icons = [];
-                        this.addIcon = function(icon) {  
-                            console.log($scope.icons);
-                            $scope.icons.push(icon);
-                        };
-                }],
+                controller: 'mdHACtrl',
                 transclude:true,
                 templateUrl:'templates/sample.html'
             };
@@ -28,7 +22,6 @@ angular.module('mdHeaderDirective',[])
                     iconId:"=iconId"
                 },
                 link: function(scope, element, attrs, ctrl) {
-                    console.log(scope);
                     ctrl.addIcon(scope);
                 }
             };

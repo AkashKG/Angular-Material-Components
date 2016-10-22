@@ -11,7 +11,7 @@
         </md-card-header>
         <div flex=""></div>
         <md-card-icon-actions layout-align="end center">
-            <md-button  aria-label="add" ng-repeat="icon in icons" class="md-icon-button md-{{icon.iconColor}}">
+            <md-button  aria-label="add" ng-repeat="icon in icons" class="md-icon-button md-{{icon.iconColor}}" ng-click="selectAction($index)">
                 <md-icon>{{icon.iconId}}</md-icon>
             </md-button>
         </md-card-icon-actions>

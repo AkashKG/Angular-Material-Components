@@ -1,4 +1,4 @@
-angular.module('myApp',['ngMaterial', 'ngRoute', 'ngMessages', 'ngAria', 'ngAnimate', 'mdHeaderDirective','mdHeaderCtrl'])
+angular.module('myApp',['ngMaterial', 'ngRoute', 'ngMessages', 'ngAria', 'ngAnimate', 'mdHeaderDirective','mdHeaderCtrl', 'mdHeaderActionCtrl'])
 .factory('dialogFactory',['$mdDialog',function($mdDialog) {
     return {
         alert : function(title, content) {
