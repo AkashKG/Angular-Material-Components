@@ -23,20 +23,23 @@ I started this on 21st of October, 2016. Whenever I'll get an Idea to form a reu
 In any of your controller you will have to provide the following information.
 
 In the `.html` file
+
 ```
 <md-header avatar="'book'" header="'This is header'" sub-header="'This is subheader'">
 	<md-header-actions icon-id="'more_vert'" icon-color="'warn'">
 	<md-header-actions icon-id="'search'" icon-color="'default'">
 </md-header>
 ```
+
 **Add actions to every action element**
 
 1. Goto `editableControllers > mdHACtrl.js`
 2. Add your functionality at selectAction()
 
-```$scope.selectAction=function(action){ //Add functionality here.             
+```
+$scope.selectAction=function(action){ //Add functionality here.             
 	dialogFactory.alert("Alert", "This is " + $scope.icons[action].iconId);
-   }
+}
 ```	
 Parameters | Help
 ---------- | ----
