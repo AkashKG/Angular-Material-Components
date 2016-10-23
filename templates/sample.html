@@ -11,10 +11,28 @@
         </md-card-header>
         <div flex=""></div>
         <md-card-icon-actions layout-align="end center">
-            <md-button  aria-label="add" ng-repeat="icon in icons" class="md-icon-button md-{{icon.iconColor}}" ng-click="selectAction($index)">
-                <md-icon>{{icon.iconId}}</md-icon>
+            <md-button  aria-label="add" ng-repeat="icon in icons" class="md-icon-button md-{{icon.iconColor}}" ng-show="icon.iconType!=='menu'" ng-click="selectAction($index)">
+                <md-icon >{{icon.iconId}}</md-icon>
             </md-button>
+            
+            <md-menu ng-repeat="icon in icons" ng-show="icon.iconType==='menu'">
+                <md-button class="md-icon-button" ng-click="openMenu($mdOpenMenu, $event)">
+                        <md-icon md-menu-origin>{{icon.iconId}}</md-icon>
+                </md-button>
+                <md-menu-content width="4">
+                    <md-menu-item>
+                        <md-button ng-click="ctrl.redial($event)">
+                            <md-icon md-menu-align-target>dialpad</md-icon>
+                                Redial
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
         </md-card-icon-actions>
     </md-card-content>
     <div  ng-transclude></div>
 </md-card>
+
+<!--
+
+-->

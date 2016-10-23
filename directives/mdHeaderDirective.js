@@ -17,9 +17,11 @@ angular.module('mdHeaderDirective',[])
                 require: '^^mdHeader',
                 restrict:'E',
                 transclude:true,
+                controller:'mdHACtrl',
                 scope:{
                     iconColor:"=iconColor",
-                    iconId:"=iconId"
+                    iconId:"=iconId",
+                    iconType:"=mdActionType"
                 },
                 link: function(scope, element, attrs, ctrl) {
                     ctrl.addIcon(scope);
